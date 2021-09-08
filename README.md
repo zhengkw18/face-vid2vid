@@ -1,6 +1,6 @@
 # face-vid2vid
 
-### 数据集准备
+### Dataset Preparation
 
 ```shell
 cd datasets
@@ -10,41 +10,37 @@ python load_videos.py --workers=8
 cd ..
 ```
 
-数据源为Youtube，需要挂梯子
-
-### 预训练姿态估计模型
+### Pretrained Headpose Estimator
 
 [300W-LP, alpha 1, robust to image quality](https://drive.google.com/open?id=1m25PrSE7g9D2q2XJVMR6IA7RaCvWSzCR)
 
-下载后将`hopenet_robust_alpha1.pkl`置于本目录下
+Put `hopenet_robust_alpha1.pkl` here
 
-### 训练
+### Train
 
 ```shell
 python train.py --batch_size=4 --gpu_ids=0,1,2,3 --num_epochs=100 (--ckp=10)
 ```
 
-指定大于0的ckp时，将从指定epoch的Checkpoint加载
+On 2080Ti, setting batch_size=4 makes up gpu memory
 
-2080Ti上，batch size设置为4恰好占满显存
+### Evaluate
 
-### 测试
-
-重建：
+Reconstruction：
 
 ```shell
 python evaluate.py --ckp=99 --source=r --driving=datasets/vox/test/id10280#NXjT3732Ekg#001093#001192.mp4
 ```
 
-默认使用第一帧为source重建
+The first frame is used as source by default
 
-动作迁移：
+Motion transfer：
 
 ```shell
 python evaluate.py --ckp=99 --source=test.png --driving=datasets/vox/test/id10280#NXjT3732Ekg#001093#001192.mp4
 ```
 
-正脸化：
+Face Frontalization：
 
 ```shell
 python evaluate.py --ckp=99 --source=f --driving=datasets/vox/train/id10192#S5yV10aCP7A#003200#003334.mp4
