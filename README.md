@@ -50,3 +50,5 @@ python evaluate.py --ckp=99 --source=test.png --driving=datasets/vox/test/id1028
 python evaluate.py --ckp=99 --source=f --driving=datasets/vox/train/id10192#S5yV10aCP7A#003200#003334.mp4
 ```
 
+## Acknowlegement
+Thanks to [NV](https://github.com/NVlabs/face-vid2vid), [Imaginaire](https://github.com/NVlabs/imaginaire), [AliaksandrSiarohin](https://github.com/AliaksandrSiarohin/first-order-model) and [DeepHeadPose](https://github.com/DriverDistraction/DeepHeadPose)
