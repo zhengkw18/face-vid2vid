@@ -42,7 +42,8 @@ Motion transfer：
 python evaluate.py --ckp=99 --source=test.png --driving=datasets/vox/test/id10280#NXjT3732Ekg#001093#001192.mp4
 ```
 
-![Motion transfer example after training for 7 days on 4 2080Ti](output-8.gif) 
+Example after training for 7 days on 4 2080Ti:
+![show](output-8.gif) 
 
 Face Frontalization：
 
