@@ -43,6 +43,7 @@ python evaluate.py --ckp=99 --source=test.png --driving=datasets/vox/test/id1028
 ```
 
 Example after training for 7 days on 4 2080Ti:
+
 ![show](output-8.gif) 
 
 Face Frontalization：
