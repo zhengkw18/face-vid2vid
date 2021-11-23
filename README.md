@@ -16,7 +16,7 @@ cd ..
 
 [300W-LP, alpha 1, robust to image quality](https://drive.google.com/open?id=1m25PrSE7g9D2q2XJVMR6IA7RaCvWSzCR)
 
-Put `hopenet_robust_alpha1.pkl` here
+Put `hopenet_robust_alpha1.pkl` under the repo root
 
 ### Train
 
